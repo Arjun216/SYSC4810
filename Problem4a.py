@@ -1,4 +1,4 @@
-from Problem2c import verify_user
+from Problem2c import verify_user, retrieve_records
 
 def login_interface():
     print("Welcome to the Login System")
@@ -12,7 +12,7 @@ def login_interface():
             print("Error: Both username and password are required. Please try again.\n")
             continue
 
-        if verify_user(username, password, "passwd.txt"):
+        if retrieve_records(username, password, "passwd.txt"):
             print(f"Login successful! Welcome, {username}.\n")
             break
         else:

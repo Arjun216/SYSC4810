@@ -17,7 +17,7 @@ def signup_interface():
 
         try:
             # Add the new user
-            add_user(username, password, role, "passwd.txt")
+            add_user(username, password,"passwd.txt", role)
             print(f"User '{username}' signed up successfully!\n")
             break
         except ValueError as e:

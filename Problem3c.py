@@ -22,7 +22,7 @@ class TestEnrollment(unittest.TestCase):
         password = "Valid123!"
         valid, message = is_password_valid(username, password)
         self.assertTrue(valid, "Password should be valid.")
-        add_user(username, password, self.test_file)
+        add_user(username, password, self.test_file, "Client")
         with open(self.test_file, "r") as f:
             content = f.read()
         self.assertIn(username, content, "Username should be present in the password file.")
